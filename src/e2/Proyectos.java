@@ -3,21 +3,21 @@ package e2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Proyectos extends Componentes{
-    public final String name;
+public class Proyectos {
+    private final String name;
     private List<Componentes> comp = new ArrayList<>();
 
-    public Proyectos(String p_name) {
-        this.name = p_name;
+    public Proyectos(String name) {
+        this.name = name;
     }
 
-    @Override
+
     public String getName(){ return name; }
 
-    @Override
+
     public void add(Componentes componentes){ comp.add(componentes); }
 
-    @Override
+
     public String getInfo() {
         StringBuilder info = new StringBuilder();
         info.append("Proyect: ").append(getName()).append("\n");

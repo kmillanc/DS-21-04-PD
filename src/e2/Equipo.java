@@ -9,6 +9,7 @@ public class Equipo extends Componentes{
     private double salary = 0;
     private List<Componentes> comp = new ArrayList<>();
 
+
     public Equipo(String name) {
         this.name = name;
     }
