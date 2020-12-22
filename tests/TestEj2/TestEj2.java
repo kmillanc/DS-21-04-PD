@@ -1,12 +1,12 @@
-package test2;
+package TestEj2;
 
 import ej2.Equipo;
 import ej2.Trabajador;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class test2 {
+public class TestEj2 {
 
     @Test
     void mainTest(){
