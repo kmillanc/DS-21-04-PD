@@ -1,4 +1,4 @@
-package ej2;
+package e2;
 
 public class Trabajador extends Componentes{
     private final String name;

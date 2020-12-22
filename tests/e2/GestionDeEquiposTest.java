@@ -1,13 +1,10 @@
-package TestEj2;
+package e2;
 
-import ej2.Equipo;
-import ej2.Trabajador;
-import ej2.Proyectos;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestEj2 {
+public class GestionDeEquiposTest {
 
     @Test
     void mainTest(){

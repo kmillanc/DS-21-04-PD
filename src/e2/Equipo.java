@@ -1,4 +1,4 @@
-package ej2;
+package e2;
 
 import java.util.ArrayList;
 import java.util.List;

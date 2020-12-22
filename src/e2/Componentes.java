@@ -1,4 +1,4 @@
-package ej2;
+package e2;
 
 public abstract class Componentes {
 

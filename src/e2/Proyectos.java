@@ -1,8 +1,7 @@
-package ej2;
+package e2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedMap;
 
 public class Proyectos extends Componentes{
     public final String name;
