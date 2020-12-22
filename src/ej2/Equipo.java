@@ -41,16 +41,30 @@ public class Equipo extends Componentes{
         StringBuilder info = new StringBuilder();
 
 
-        info.append("Team ").append(getName()).append(": ").append(getHours()).append(" hours, ").append(getSalary()).append(" €\n");
+        //info.append("Team ").append(getName()).append(": ").append(getHours()).append(" hours, ").append(getSalary()).append(" €\n");
         //info.append("\t").append(getInfo()).append("\n");
-
+        info.append("Team ").append(getName()).append(": ");
+        if(this.hours != 0){
+            info.append(this.hours).append(" hours, ");
+        }
+        else{
+            info.append(getHours()).append(" hours, ");
+        }
+        if(this.salary != 0){
+            info.append(this.salary).append(" €\n");
+        }else{
+            info.append(getSalary()).append(" €\n");
+        }
 
         for (Componentes componentes:comp) {
             //componentes.getInfo();
 //            if(componentes.getInfo().contains("Team"))
 //                info.append("Team ").append(getName()).append(": ").append(getHours()).append(" hours, ").append(getSalary()).append(" €\n");
 //            else
-                info.append("\t").append(componentes.getInfo()).append("\n");
+            info.append("\t").append(componentes.getInfo());
+            if (!componentes.getClass().equals(Equipo.class)) {
+                info.append("\n");
+            }
         }
 
         return new String(info);

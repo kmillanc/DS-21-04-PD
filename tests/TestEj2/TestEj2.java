@@ -2,6 +2,7 @@ package TestEj2;
 
 import ej2.Equipo;
 import ej2.Trabajador;
+import ej2.Proyectos;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -10,6 +11,8 @@ public class TestEj2 {
 
     @Test
     void mainTest(){
+        Proyectos p1 = new Proyectos("Software Design");
+        Proyectos p2 = new Proyectos("Algorithms");
         Trabajador t1 = new Trabajador("Juan", 18);
         t1.setHours(8);
         t1.setHours(8);
@@ -65,21 +68,38 @@ public class TestEj2 {
                 \tWorker Sultan: 22.0 hours, 286.0 €
                 """, e1.getInfo());
 
-        Equipo e3 = new Equipo("Equipo A2");
-        e3.add(t6);
-        e3.add(t7);
-        e1.add(e3);
+        p1.add(e1);
+        p1.getInfo();
         assertEquals("""
-                Team Equipo A: 55.0 hours, 858.0 €
+                Proyect: Software Design
+                \tTeam Equipo A: 55.0 hours, 858.0 €
                 \tWorker Juan: 16.0 hours, 288.0 €
                 \tWorker Mateo: 18.0 hours, 360.0 €
                 \tWorker Peter: 21.0 hours, 210.0 €
                 \tTeam Equipo A1: 40.0 hours, 556.0 €
                 \tWorker Tupac: 18.0 hours, 270.0 €
                 \tWorker Sultan: 22.0 hours, 286.0 €
+                """, p1.getInfo());
+
+        Equipo e3 = new Equipo("Equipo A2");
+        e3.add(t6);
+        e3.add(t7);
+        assertEquals("""
+                Team Equipo A2: 44.0 hours, 638.0 €
+                \tWorker Anton: 22.0 hours, 264.0 €
+                \tWorker Mario: 22.0 hours, 374.0 €
+                """, e3.getInfo());
+
+        p2.add(e3);
+        p2.getInfo();
+        assertEquals("""
+                Proyect: Algorithms
                 \tTeam Equipo A2: 44.0 hours, 638.0 €
                 \tWorker Anton: 22.0 hours, 264.0 €
                 \tWorker Mario: 22.0 hours, 374.0 €
-                """, e1.getInfo());
+                """, p2.getInfo());
+
+
+
     }
 }
